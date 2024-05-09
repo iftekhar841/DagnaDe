@@ -186,7 +186,7 @@ const forgetPassword = async (forgetDetails) => {
   console.log("reset token", resetToken);
 
   const subject = `Dagna De Reset Password`;
-  const resetUrl = `${process.env.CLIENT_URL}/#/reset-password/${resetToken}`;
+  const resetUrl = `${process.env.CLIENT_URL || process.env.CLIENT_URL_TWO}/#/reset-password/${resetToken}`;
 
   const resetMessageAndLink = `Click on the link to reset your password. ${resetUrl}. If you 
   have not request then ignore it`;
