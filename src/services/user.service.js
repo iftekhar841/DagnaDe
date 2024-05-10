@@ -181,10 +181,9 @@ const forgetPassword = async (forgetDetails) => {
   if (!user) {
     throw new apiError(404, "User does not exists");
   }
-  
+
 
   const resetToken = await user.getResetToken();
-  console.log("reset token", resetToken);
 
   const subject = `Dagna De Reset Password`;
   const resetUrl = `${process.env.CLIENT_URL || process.env.CLIENT_URL_TWO}/#/reset-password/${resetToken}`;
