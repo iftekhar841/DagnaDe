@@ -181,6 +181,7 @@ const forgetPassword = async (forgetDetails) => {
   if (!user) {
     throw new apiError(404, "User does not exists");
   }
+  
 
   const resetToken = await user.getResetToken();
   console.log("reset token", resetToken);
